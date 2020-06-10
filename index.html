@@ -48,6 +48,8 @@
 <br><br>
 <a href="#final-model"><em>- Final Model</em></a>
 <br><br>
+        <a href="#conclusion"><em>- Conclusion</em></a>
+<br><br>
       
       </header>
       <section>
@@ -72,7 +74,7 @@ For each LSTM layer, it has 100 hidden units. The output layer is a dense layer 
 
 <p><img src="/RNN-Headline-Prediction/images/basemodelloss.png" alt="Change of Loss in Base Model over 50 epochs" /></p>
 
-<table style="width:50%">
+<table style="width:95%">
   <tr>
     <th>Number of epoch </th>
     <th>Seed</th>
@@ -115,7 +117,48 @@ For each LSTM layer, it has 100 hidden units. The output layer is a dense layer 
 
 <p><img src="/RNN-Headline-Prediction/images/bestmodelloss.png" alt="Change of Loss in Final Model over 50 epochs" /></p>
 
+ <p>Generated 5 headlines after 50 epochs</p>
+        <table style="width:95%">
+  <tr>
+    <th>Number </th>
+    <th>Seed</th>
+    <th>Predicted Headline </th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td> rate police search for missing island great large </td>
+    <td> sports organisations warn against water
+</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td> investment banker denies lying at icac </td>
+    <td> industry of limits bracks in athens criminals to </td>
+  </tr>
+<tr>
+    <td>3</td>
+    <td> holocaust citizenship</td>
+    <td> semis egg freedom as smuggler kong macau diverse </td>
+  </tr>
+<tr>
+    <td>4</td>
+    <td> witnesses praised for apprehending alleged </td>
+    <td> rattles cup bomber implications reaction matthewson trump police </td>
+  </tr>
+<tr>
+    <td>5</td>
+    <td> govt wants public input on anti cartel laws </td>
+    <td> ordeal on 6 over jakarta hockeyroos defeat marking choppers </td>
+  </tr>
 
+</table>
+        <h2 id=conclusion>Conclusion</h2>
+        
+<p>
+From the experiment on different models, we could draw a conclusion: For this model. With the number of epochs increase, the performance of the model will improve. Sequence length, the number of units, the number of layers all affect the model loss.
+In order to build the best model, I will choose a 2-LSTM layer, 2 dense layer model with the number of units as 64, the number of epochs as 100, the sequence length of 60.
+The funniest headline I got was ‘kills trump kills towns kills trump police prices’, the best headline was ‘sports organizations warn against water’, which was amazing.
+        </p>
       </section>
       <footer>
         
