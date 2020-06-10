@@ -36,6 +36,6 @@ There are many ways for parameter selection, here I tried to change the followin
 
 ## Final Model
 
-![Final Model Shape](images/finalmodelshape.png)
+![Final Model Shape](images/bestmodelshape.png)
 
-![Change of Loss in Final Model over 50 epochs](images/finalmodelloss.png)
+![Change of Loss in Final Model over 50 epochs](images/bestmodelloss.png)
