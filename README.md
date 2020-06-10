@@ -18,7 +18,7 @@ For each LSTM layer, it has 100 hidden units. The output layer is a dense layer 
 ![Base Model Shape](images/basemodelshape)
 
 
-![Change of loss in Base Model over 50 epochs](images/basemodelloss)
+![Change of Loss in Base Model over 50 epochs](images/basemodelloss)
 
 - Bulleted
 - List
@@ -30,7 +30,12 @@ Number of epoch	Seed	Predicted headline
 40	witnesses praised for apprehending alleged	rattles cup bomber implications reaction matthewson trump police
 50	mitsubishi workers urged to accept redundancy	and attempted court hears of bunbury year choppers
 
+## Parameter selection
 
-[Link](url) and ![Image](src)
-```
+There are many ways for parameter selection, here I tried to change the following parameters: the number of units, the number of layers, sequence length etc. And each time, I tired to compare the loss of the models. And finally I arrived at our final model.
 
+## Final Model
+
+![Final Model Shape](images/finalmodelshape)
+
+![Change of Loss in Final Model over 50 epochs](images/finalmodelloss)
