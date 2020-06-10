@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+## Objective
 
-You can use the [editor on GitHub](https://github.com/RuxinLi/RNN-Headline-Prediction/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The goal of this assignment is to use RNN to predict headlines for news. Parameter selection and model optimization are implemented to find the base model, and different model were trained to see the effect of parameters. Checkpoints were set to find out how the model trained with epochs increasing.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Data Prepocessing
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The dataset is a csv file with over 1 million rows, in order to reduce the time cost and memory used to train the model, I selected 10 thousand of rows, and removed the column ‘publish-data’ because it’s irrelevant to our target. 
+Then I transformed and trimmed the data. Because my model is learning by word, so I created mapping of unique words to integers. Then, I created sequence of words as X, and the word right next to the sequence as Y by iterating the whole text. My prediction was based on comparing different probabilities of words being the next words given a sequence of words.
+Finally, I reshaped and normalized the X variable, and transformed the Y into categorical variable
 
-```markdown
-Syntax highlighted code block
+## Model Selection:
+The model that I used was a LSTM model with 2 dense layer, 2 LSTM layer with dropout rate equal to 0.2 after each layer included embedding method.
+For each LSTM layer, it has 100 hidden units. The output layer is a dense layer with ‘softmax’ activation function, which is used for multi-class classification problem. I set the sequence length as 30, and the number of epochs as 50, the batch size as 128, also I set checkpoint after every 10 epochs to monitor how the loss of the model changes over time. 
 
-# Header 1
-## Header 2
-### Header 3
+## Base Model
+
+![Base Model Shape](src)
+
+
+![Change of loss in Base Model over 50 epochs](src)
 
 - Bulleted
 - List
 
-1. Numbered
-2. List
+Number of epoch	Seed	Predicted headline
+10	 nuclear isotopes run low after reactor shutdown	to be mccarthy police police police police police
+20	investment banker denies lying at icac	bloom dies on the driving case in missing
+30	build sports stadium opposition	police slowdown league trump minister slams fremantle penalty
+40	witnesses praised for apprehending alleged	rattles cup bomber implications reaction matthewson trump police
+50	mitsubishi workers urged to accept redundancy	and attempted court hears of bunbury year choppers
 
-**Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RuxinLi/RNN-Headline-Prediction/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
