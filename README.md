@@ -15,10 +15,10 @@ For each LSTM layer, it has 100 hidden units. The output layer is a dense layer 
 
 ## Base Model
 
-![Base Model Shape](images/basemodelshape)
+![Base Model Shape](images/basemodelshape.png)
 
 
-![Change of Loss in Base Model over 50 epochs](images/basemodelloss)
+![Change of Loss in Base Model over 50 epochs](images/basemodelloss.png)
 
 - Bulleted
 - List
@@ -36,6 +36,6 @@ There are many ways for parameter selection, here I tried to change the followin
 
 ## Final Model
 
-![Final Model Shape](images/finalmodelshape)
+![Final Model Shape](images/finalmodelshape.png)
 
-![Change of Loss in Final Model over 50 epochs](images/finalmodelloss)
+![Change of Loss in Final Model over 50 epochs](images/finalmodelloss.png)
