@@ -20,15 +20,7 @@ For each LSTM layer, it has 100 hidden units. The output layer is a dense layer 
 
 ![Change of Loss in Base Model over 50 epochs](images/basemodelloss.png)
 
-- Bulleted
-- List
 
-Number of epoch	Seed	Predicted headline
-10	 nuclear isotopes run low after reactor shutdown	to be mccarthy police police police police police
-20	investment banker denies lying at icac	bloom dies on the driving case in missing
-30	build sports stadium opposition	police slowdown league trump minister slams fremantle penalty
-40	witnesses praised for apprehending alleged	rattles cup bomber implications reaction matthewson trump police
-50	mitsubishi workers urged to accept redundancy	and attempted court hears of bunbury year choppers
 
 ## Parameter selection
 
