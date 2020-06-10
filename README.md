@@ -15,10 +15,10 @@ For each LSTM layer, it has 100 hidden units. The output layer is a dense layer 
 
 ## Base Model
 
-![Base Model Shape](src)
+![Base Model Shape](images/basemodelshape)
 
 
-![Change of loss in Base Model over 50 epochs](src)
+![Change of loss in Base Model over 50 epochs](images/basemodelloss)
 
 - Bulleted
 - List
